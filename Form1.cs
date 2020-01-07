@@ -12,6 +12,7 @@ namespace MyUtilites
 {
     public partial class MainForm : Form
     {
+        int count = 0;
         public MainForm()
         {
             InitializeComponent();
@@ -24,7 +25,25 @@ namespace MyUtilites
 
         private void TsmiAbout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Программа мои утилиты", "О программе");
+            MessageBox.Show("Программа мои утилиты", "О программе ");
+        }
+
+        private void BtnPlus_Click(object sender, EventArgs e)
+        {
+            count++;
+            lblCount.Text = count.ToString();
+        }
+
+        private void BtnMinus_Click(object sender, EventArgs e)
+        {
+            count--;
+            lblCount.Text = count.ToString();
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            lblCount.Text = "0";
+            count = 0;
         }
     }
 }
